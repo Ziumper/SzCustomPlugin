@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * Undocumented class
+ * 
  * @RouteScope(scopes={"storefront"})
  */
 class ExampleController extends StorefrontController {
