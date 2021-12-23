@@ -4,19 +4,14 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
+    <imports>
+            <import resource="./storefront/controllers.xml" />
+    </imports>
     <services>
             <service id="SzCustomPlugin\Commands\ExampleCommand">
                     <argument id="kernel" type="service" />
                     <argument id="product.repository" type="service"/>
                     <tag name="console.command"/>
-            </service>
-            <service id="SzCustomPlugin\Storefront\Controller\ExampleController"
-                public="true"
-            >
-                <call method="setContainer">
-                        <argument type="service" id="service_container"/>
-                </call>
-                <argument type="service" id="product.repository"></argument>
             </service>
             <service id="SzCustomPlugin\Controller\ExampleJsonController" public="true">
                 <call method="setContainer">
