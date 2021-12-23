@@ -49,4 +49,27 @@ class GenericPageController extends StorefrontController {
         );
 
     }
+
+    /**
+    * @Route("/sz/redirect/login", name="frontend.sz.redirect.login", methods={"GET"})
+    */
+    public function redirectToLogin(Request $request, SalesChannelContext $salesChannelContext)  {
+        return $this->redirectToRoute('frontend.account.login.page');
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @Route("/sz/forward/login", name="frontend.sz.forward.login", methods={"GET"})
+     */
+    public function forwardToLogin() {
+        return $this->forwardToRoute('frontend.account.login.page',['success' => false]);
+    }
+
+    /**
+    * @Route("/sz/forward/example", name="frontend.sz.forward.example", methods={"GET"})
+    */
+    public function forwardToExample(Request $request, SalesChannelContext $salesChannelContext)  {
+        return $this->forwardToRoute('frontend.sz.example');
+    }
 }
