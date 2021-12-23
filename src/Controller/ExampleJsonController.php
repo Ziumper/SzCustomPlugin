@@ -20,7 +20,7 @@ class ExampleJsonController extends AbstractController {
     /**
      * Example json controller class get data method
      * 
-     * XMLHttpRequest - is required for security reasons 
+     * XmlHttpRequest - is required for security reasons 
      * 
      * @Route("sz/json",name="frontend.sz.json", methods={"GET"},defaults={"XmlHttpRequest"=true})
      *
