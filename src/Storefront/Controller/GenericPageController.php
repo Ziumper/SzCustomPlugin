@@ -13,6 +13,7 @@ use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Shopware\Recovery\Common\HttpClient\Response;
 use SimpleShopwareHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use SzCustomPlugin\Exception\ExampleNotFoundException;
 
 /**
  * Undocumented class
@@ -75,11 +76,11 @@ class GenericPageController extends StorefrontController {
         return $this->forwardToRoute('frontend.sz.example');
     }
     
-    // /**
-    //  * @Route("/sz/exception", name="frontend.sz.exception", methods={"GET"})
-    //  */
-    // public function throwException(): Response
-    // {
-     
-    // }
+    /**
+     * @Route("/sz/exception", name="frontend.sz.exception", methods={"GET"})
+     */
+    public function throwException(): Response
+    {
+        throw new ExampleNotFoundException("Whoops, something went wrong!");
+    }
 }
