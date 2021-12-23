@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing
+        https://symfony.com/schema/routing/routing-1.0.xsd">
+
+        <!-- 
+            inside resource argument we are providing the path for annotation that need to be 
+            inside the ExampleController.php, so we are moving 2 folders above to go into 
+            Storefront/Controller folder and then we are using /** to omit all subcategories, 
+            *Controller.php is used for naming convention adjust. Sufix Controller should be applied, if not 
+            the annotation will be not applied 
+         -->
+    <import resource="../../Storefront/Controller/**/*Controller.php" type="annotation" />
+</routes>

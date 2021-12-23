@@ -39,6 +39,14 @@ class ExampleCommand extends Command {
         $this->setName("example")->setDescription("Hello World!");
     }
 
+    /**
+     * It is displaying example hello world 
+     * and display also some command 
+     * 
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return integer
+     */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $output->writeln("Hello World!");
