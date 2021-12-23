@@ -10,7 +10,9 @@ use Shopware\Storefront\Page\Page;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Shopware\Core\Framework\Routing\Annotation\RouteScope;
-
+use Shopware\Recovery\Common\HttpClient\Response;
+use SimpleShopwareHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Undocumented class
@@ -72,4 +74,12 @@ class GenericPageController extends StorefrontController {
     public function forwardToExample(Request $request, SalesChannelContext $salesChannelContext)  {
         return $this->forwardToRoute('frontend.sz.example');
     }
+    
+    // /**
+    //  * @Route("/sz/exception", name="frontend.sz.exception", methods={"GET"})
+    //  */
+    // public function throwException(): Response
+    // {
+     
+    // }
 }
