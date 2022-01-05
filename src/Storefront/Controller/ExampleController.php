@@ -6,8 +6,9 @@ namespace SzCustomPlugin\Storefront\Controller;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
 use Shopware\Storefront\Controller\StorefrontController;
 use Shopware\Core\Framework\Routing\Annotation\RouteScope;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
+
 
 
 /**
