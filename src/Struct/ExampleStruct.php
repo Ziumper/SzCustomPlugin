@@ -6,7 +6,7 @@ use Shopware\Core\Framework\Struct\Struct;
 
 class ExampleStruct  extends Struct {
 
-    private $name;
+    protected $name;
 
     public function getName() {
         return $this->name;
