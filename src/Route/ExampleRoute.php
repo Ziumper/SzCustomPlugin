@@ -2,7 +2,7 @@
 
 namespace SzCustomPlugin\Route;
 
-use OpenApi\Annotations\Get;
+// use OpenApi\Annotations\Get;
 use OpenApi\Annotations as OA;
 use Shopware\Core\System\SalesChannel\StoreApiResponse;
 use SzCustomPlugin\Route\Response\ExampleResponse;
@@ -21,7 +21,7 @@ class ExampleRoute {
      * 
      * 
      * @Since("6.3.0.0")
-     * @Get(
+     * @OA\Get(
      *  path="/example",
      *      summary="Example route",
      *      description="Example resource route",
