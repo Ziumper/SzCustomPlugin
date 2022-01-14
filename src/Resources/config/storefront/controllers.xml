@@ -8,7 +8,8 @@
             <call method="setContainer">
                     <argument type="service" id="service_container"/>
             </call>
-            <argument type="service" id="product.repository"></argument>
+            <argument type="service" id="product.repository"/>
+            <argument type="service" id="sz-custom-plugin-logger" />
         </service>
         <service id="SzCustomPlugin\Storefront\Controller\GenericPageController" public="true">
             <call method="setContainer">

@@ -20,9 +20,15 @@
             </service>
             <service id="SzCustomPlugin\Controller\ExampleApiController" public="true">
                 <call method="setContainer">
-                        <argument type="service" id="service_container"></argument>            
+                        <argument type="service" id="service_container"/>
                 </call>
             </service>
-            <service id="SzCustomPlugin\Route\ExampleRoute" public="true"></service>
+            <service id="SzCustomPlugin\Route\ExampleRoute" public="true"/>
+            <service id="SzCustomPlugin\Util\LoggerFactory" >
+                <argument type="service" id="kernel" />
+            </service>
+            <service id="sz-custom-plugin-logger" class="Monolog\Logger" >
+                <factory service="SzCustomPlugin\Util\LoggerFactory" method="create" />
+            </service>
     </services>
 </container>
